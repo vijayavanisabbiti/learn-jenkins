@@ -2,10 +2,26 @@ pipeline {
     agent { node { label 'workstation' } }
 
     stages {
-        stage('Hello') {
+        stage('Compile') {
             steps {
-                echo 'Hello World'
+                echo 'Compile'
+            }
+        }
+        stage('Test cases') {
+            steps {
+                echo 'Test cases'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Release'
             }
         }
     }
-}\
+}
